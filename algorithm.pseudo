@@ -1,0 +1,33 @@
+1. **Initialize the Project Setup:**
+   - Step 1: Set up a new Node.js project by running `npm init` and creating the `quiz.js` file.
+   - Step 2: Install necessary dependencies (e.g., readline-sync).
+   - Step 3: Create the folder structure:
+     ```
+     quiz-app/
+     ├── quiz.js
+     ├── package.json
+     ```
+
+---
+
+2. **Quiz Setup**
+```javascript
+function setupQuiz() {
+    // Step 1: Create an array of questions, where each question contains the following:
+    // - Question text
+    // - Possible answers
+    // - Correct answer
+    // - Time limit for each question
+    const questions = [
+        {
+            text: "Question 1",
+            options: ["a", "b", "c"],
+            correctAnswer: "a",
+            timeLimit: 30 // seconds
+        },
+        // More questions...
+    ];
+
+    // Step 2: Set a total quiz duration (e.g., 5 minutes)
+    const totalQuizTime = 5 * 60; // in seconds
+}
