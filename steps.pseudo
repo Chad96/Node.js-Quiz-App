@@ -1,0 +1,64 @@
+1. Initialize the Quiz:
+   - Start the application:
+     - Set up the quiz with an array of questions, where each question has:
+       - A question prompt.
+       - The correct answer.
+   
+   - Define the quiz rules:
+     - Set the time limit for answering each question (e.g., 10 seconds).
+     - Set the total quiz duration (e.g., 30 seconds) for completing all questions.
+
+2. Start the Quiz:
+   - Initialize the score to zero.
+   - Set the current question index to the first question.
+
+3. Ask a Question:
+   - Display the current question:
+     - Show the question prompt.
+     - Start a timer that:
+       - Counts down the remaining time for this question (e.g., from 10 seconds).
+       - Displays the remaining time every second.
+   
+   - Start a timer for the question:
+     - Allow the user to input an answer within the given time.
+   
+   - Handle user input:
+     - If the user answers the question within the time limit:
+       - Stop the timer.
+       - Check if the answer is correct:
+         - If correct: Increase the score.
+         - If wrong: Provide the correct answer.
+     - If the user doesn't answer in time:
+       - Display a message indicating that time is up.
+       - Move to the next question automatically.
+
+4. Move to the Next Question:
+   - Move to the next question after the current question is answered or if time runs out:
+     - Increase the question index by one.
+     - If there are more questions, repeat the process and ask the next question.
+
+5. Track Total Quiz Time:
+   - Set up a total quiz timer:
+     - Start a separate timer that counts down the overall quiz duration (e.g., 30 seconds).
+     - If the total time runs out:
+       - Stop the quiz.
+       - Display the final score.
+
+6. End the Quiz:
+   - End the quiz when:
+     - All questions are answered.
+     - The total quiz time runs out.
+   
+   - Display the final score:
+     - Show how many questions were answered correctly out of the total.
+
+   - Exit the quiz gracefully.
+
+Error Handling:
+   - Handle invalid inputs:
+     - If the user inputs something unexpected (e.g., an empty string), provide a message asking them to try again.
+   
+   - Handle timeouts:
+     - If the time for a question runs out, move to the next question automatically.
+   
+   - Gracefully end the quiz if the total time runs out, ensuring all timers are stopped and the final score is displayed.
