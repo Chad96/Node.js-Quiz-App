@@ -1,0 +1,20 @@
+{
+  "name": "node.js-quiz-app",
+  "version": "1.0.0",
+  "description": "node.js-quiz-app",
+  "main": "quiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quiz",
+    "node.js",
+    "cli",
+    "timed"
+  ],
+  "author": "Chadrack",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
