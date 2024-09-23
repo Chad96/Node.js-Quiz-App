@@ -15,6 +15,7 @@
   "author": "Chadrack",
   "license": "ISC",
   "dependencies": {
+    "nodemon": "^3.1.7",
     "readline-sync": "^1.4.10"
   }
 }

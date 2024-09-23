@@ -3,14 +3,14 @@ const readlineSync = require('readline-sync');
 // Questions for the quiz
 const questions = [
   { question: "What is the capital of France?", answer: "Paris" },
-  { question: "Who wrote 'To Kill a Mockingbird'?", answer: "Harper Lee" },
+  { question: "Who created 'node.js'?", answer: "Ryan Dahl" },
   { question: "What is the square root of 144?", answer: "12" },
 ];
 
 let score = 0;
 let currentQuestionIndex = 0;
 const timePerQuestion = 10000; // 10 seconds for each question
-const totalQuizTime = 30000; // 30 seconds for the entire quiz
+const totalQuizTime = 30000; // 30 seconds for the entire quiz 
 
 // Asks the current question and manages the time
 function askQuestion() {
