@@ -1,20 +1,22 @@
-const readline = require('readline');
+const readline = require("readline");
 
 // Questions for the quiz
 const questions = [
   { question: "What is the capital of France?", answer: "Paris" },
   { question: "Who created 'node.js'?", answer: "Ryan Dahl" },
   { question: "What is the square root of 144?", answer: "12" },
+  { question: "What does CPU stand for?", answer: "Central Processing Unit" },
+  { question: "What does RAM stand for?", answer: "Random Access Memory" },
 ];
 
 let score = 0;
 let currentQuestionIndex = 0;
-const timePerQuestion = 10000; // 10 seconds for each question
-const totalQuizTime = 30000; // 30 seconds for the entire quiz
+const timePerQuestion = 20000; // 20 seconds for each question
+const totalQuizTime = 80000; // 80 seconds for the entire quiz
 
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
 // Asks the current question and manages the time
@@ -27,7 +29,7 @@ function askQuestion() {
 
     const timer = setInterval(() => {
       remainingTime--;
-      process.stdout.write(`\rTime left: ${remainingTime} seconds`);
+      process.stdout.write(`\rTime left: ${remainingTime} seconds  `);
       if (remainingTime <= 0) {
         clearInterval(timer);
         console.log("\nTime's up for this question!");
@@ -63,7 +65,7 @@ function moveToNextQuestion() {
 function endQuiz() {
   console.log("\nQuiz finished!");
   console.log(`Your final score is: ${score}/${questions.length}`);
-  rl.close();  // Close the readline interface
+  rl.close(); // Close the readline interface
   process.exit();
 }
 
